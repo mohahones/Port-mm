@@ -31,7 +31,7 @@ body {
 
 
 .hero {
-  height: 100vh;
+  height: calc(100vh - 63px);
   padding: 60px 48px 56px;
   border-bottom: 1px solid var(--bd);
   position: relative;
@@ -107,6 +107,10 @@ body {
   opacity: 0.1;
   background-color: var(--bg);
   animation: fadeIn .8s ease both
+}
+
+li {
+  list-style: none
 }
 
 .logo {
@@ -784,33 +788,37 @@ body {
     opacity: 0.15
   }
 
-  .ring-deco{
-    width: 100px;
+  .ring-deco {
+    width: 140px;
+  }
+
+  .ring-deco2 {
+    width: 80px;
   }
 
   .hero-name .line1,
   .hero-name .line2,
   .hero-name .line3 {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 
   p.cursor-line,
   p.hero-bio {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 
-  .cta-row{
+  .cta-row {
     flex-direction: column;
   }
 
   .btn-p,
   .btn-s {
     width: fit-content;
-    font-size: 0.rem;
+    font-size: 0.9rem;
   }
 
   .typed {
-    font-size: 0.4rem
+    font-size: 0.9rem
   }
 
 }
@@ -820,6 +828,13 @@ body {
     opacity: 0.15
   }
 
+  .ring-deco {
+    width: 240px;
+  }
+
+  .ring-deco2 {
+    width: 180px;
+  }
 
   .hero-name .line1,
   .hero-name .line2,
@@ -841,6 +856,15 @@ body {
 @media (min-width: 1280px) {
   .nav {
     opacity: 0.15
+  }
+
+  .ring-deco {
+    width: 440px;
+  }
+
+  .ring-deco2 {
+    width: 380px;
+    font-size: 500px;
   }
 
   .hero-name .line1,

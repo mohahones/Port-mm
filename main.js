@@ -97,7 +97,7 @@ function download() {
 let typed = new Typed("#typing", {
   strings: [
     "Frontend Developer",
-    "Building Modern Interfaces",
+    "Building Modern Interfac",
     "Loving Clean Code",
   ],
   typeSpeed: 60,
