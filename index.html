@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MH Vision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="pf">
+        <nav class="nav">
+            <a href="#" class="logo">MH Vision</a>
+            <div class="nav-links">
+                <a href="#project">WORK</a>
+                <a href="#skills-sec">SKILLS</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </nav>
+
+
+        <section class="hero">
+
+
+            <div class="grid-bg"></div>
+            <div class="scanline-wrap">
+                <div class="scanline"></div>
+            </div>
+            <div class="particles" id="particles"></div>
+
+            <svg class="ring-deco" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="120" cy="120" r="115" stroke="#AFA9EC" stroke-width="1" stroke-dasharray="8 6" />
+                <circle cx="120" cy="120" r="90" stroke="#5DCAA5" stroke-width="0.5" stroke-dasharray="4 8" />
+            </svg>
+            <svg class="ring-deco2" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="90" cy="90" r="85" stroke="#AFA9EC" stroke-width="1" stroke-dasharray="2 12" />
+            </svg>
+
+
+            <section class="block">
+                <p class="status-badge"><span class="dot"></span> AVAILABLE FOR WORK</p>
+                <main class="hero-name">
+                    <span class="line1">FontEnd<span class="line2"> web</span></span>
+                    <span class="line3">Developer</span>
+                    <p class="typed">I am <span id="typing"></span></p>
+                </main>
+
+                <p class="cursor-line">{ Study · BUILDER · CREATOR }<span class="cursor"></span></p>
+                <p class="hero-bio">I don't just bulid websites — I create experiences. </p>
+                <section class="cta-row">
+                    <a href="#project" class="btn-p">VIEW PROJECTS</a>
+                    <a class="btn-s">DOWNLOAD CV</a>
+                </section>
+                <!-- <div class="stats-row">
+                    <div>
+                        <div class="stat-num"><span id="s1">0</span>+</div>
+                        <div class="stat-lbl">YEARS EXP</div>
+                    </div>
+                    <div>
+                        <div class="stat-num"><span id="s2">0</span>+</div>
+                        <div class="stat-lbl">PROJECTS</div>
+                    </div>
+                    <div>
+                        <div class="stat-num"><span id="s3">0</span></div>
+                        <div class="stat-lbl">CLIENTS</div>
+                    </div>
+                    <div>
+                        <div class="stat-num"><span id="s4">0</span>%</div>
+                        <div class="stat-lbl">SATISFACTION</div>
+                    </div>
+                </div> -->
+            </section>
+        </section>
+
+        <div class="section" id="skills-sec">
+            <div class="sec-h">Tech Stack</div>
+            <div class="skills-wrap">
+                <div class="sk">
+                    <div class="sk-icon">⚛</div>
+                    <div class="sk-name">React / Next.js</div>
+                    <div class="sk-bar">
+                        <div class="sk-fill" data-w="93"></div>
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="sk-icon">🟨</div>
+                    <div class="sk-name">TypeScript</div>
+                    <div class="sk-bar">
+                        <div class="sk-fill" data-w="88"></div>
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="sk-icon">🐍</div>
+                    <div class="sk-name">Python</div>
+                    <div class="sk-bar">
+                        <div class="sk-fill" data-w="85"></div>
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="sk-icon">🐳</div>
+                    <div class="sk-name">Docker / K8s</div>
+                    <div class="sk-bar">
+                        <div class="sk-fill" data-w="78"></div>
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="sk-icon">🗄</div>
+                    <div class="sk-name">PostgreSQL</div>
+                    <div class="sk-bar">
+                        <div class="sk-fill" data-w="82"></div>
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="sk-icon">☁</div>
+                    <div class="sk-name">AWS / GCP</div>
+                    <div class="sk-bar">
+                        <div class="sk-fill" data-w="75"></div>
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="sk-icon">⚡</div>
+                    <div class="sk-name">Node.js</div>
+                    <div class="sk-bar">
+                        <div class="sk-fill" data-w="90"></div>
+                    </div>
+                </div>
+                <div class="sk">
+                    <div class="sk-icon">🔷</div>
+                    <div class="sk-name">GraphQL</div>
+                    <div class="sk-bar">
+                        <div class="sk-fill" data-w="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="project">
+            <div class="sec-h">Selected Work</div>
+            <div class="proj-grid">
+                <div class="pc">
+                    <div class="pc-thumb pt1"><span class="pc-glyph">⬡</span>
+                        <div class="pc-tag">FULLSTACK</div>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-title">DevFlow Platform</div>
+                        <div class="pc-desc">Real-time collaborative dev environment with live code execution and team
+                            syncing.</div>
+                        <div class="pc-pills"><span class="pill">Next.js</span><span class="pill">WebSocket</span><span
+                                class="pill">Redis</span></div>
+                    </div>
+                </div>
+                <div class="pc">
+                    <div class="pc-thumb pt2"><span class="pc-glyph">◈</span>
+                        <div class="pc-tag">API</div>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-title">Sentinel API</div>
+                        <div class="pc-desc">High-throughput REST & GraphQL API serving 2M+ requests/day at sub-50ms
+                            latency.</div>
+                        <div class="pc-pills"><span class="pill">Node.js</span><span class="pill">GraphQL</span><span
+                                class="pill">PostgreSQL</span></div>
+                    </div>
+                </div>
+                <div class="pc">
+                    <div class="pc-thumb pt3"><span class="pc-glyph">◉</span>
+                        <div class="pc-tag">ML</div>
+                    </div>
+                    <div class="pc-body">
+                        <div class="pc-title">PulseML Dashboard</div>
+                        <div class="pc-desc">ML model monitoring with drift detection, alerting, and performance
+                            visualization.</div>
+                        <div class="pc-pills"><span class="pill">Python</span><span class="pill">FastAPI</span><span
+                                class="pill">React</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="about">
+            <div class="sec-h">Journey</div>
+            <div class="exp-list" id="exp-list">
+                <div class="ei">
+                    <div class="ei-yr">2023 — NOW</div>
+                    <div>
+                        <div class="ei-role">Senior Full Stack Engineer</div>
+                        <div class="ei-co">ACME CORP</div>
+                        <div class="ei-desc">Led 6-engineer team building a SaaS platform processing $10M+ daily.
+                            Migrated monolith to microservices — cut infra costs 40%.</div>
+                    </div>
+                </div>
+                <div class="ei">
+                    <div class="ei-yr">2021 — 2023</div>
+                    <div>
+                        <div class="ei-role">Software Engineer II</div>
+                        <div class="ei-co">NOVA LABS</div>
+                        <div class="ei-desc">Shipped 3 major features, improving user retention by 28%. Owned backend
+                            for real-time notification system.</div>
+                    </div>
+                </div>
+                <div class="ei">
+                    <div class="ei-yr">2019 — 2021</div>
+                    <div>
+                        <div class="ei-role">Frontend Developer</div>
+                        <div class="ei-co">PIXEL STUDIO</div>
+                        <div class="ei-desc">Built React component libraries and design systems used across 5+ client
+                            products.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="border-bottom:none" id="contact">
+            <div class="cta-box">
+                <div class="cta-h">Let's build something <em>remarkable</em> together.</div>
+                <div class="clinks">
+                    <a class="cl" href="#"><span class="cl-arrow">→</span> hello@yourname.dev</a>
+                    <a class="cl" href="#"><span class="cl-arrow">→</span> github.com/yourname</a>
+                    <a class="cl" href="#"><span class="cl-arrow">→</span> linkedin.com/in/yourname</a>
+                    <a class="cl" href="#"><span class="cl-arrow">→</span> @yourhandle</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="ft">© 2026 YOUR NAME</div>
+            <div class="ft">BUILT WITH PASSION + CODE</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
