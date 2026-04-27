@@ -784,6 +784,10 @@ body {
     opacity: 0.15
   }
 
+  .ring-deco{
+    width: 100px;
+  }
+
   .hero-name .line1,
   .hero-name .line2,
   .hero-name .line3 {
