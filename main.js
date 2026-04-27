@@ -94,6 +94,7 @@ function download() {
   link.download = "Mohammad_AlHunes_CV.pdf";
   link.click();
 }
+
 let typed = new Typed("#typing", {
   strings: [
     "Frontend Developer",
@@ -105,4 +106,10 @@ let typed = new Typed("#typing", {
   backDelay: 1500,
   startDelay: 500,
   loop: true,
+});
+
+let menuB = document.getElementById("mobile-menu");
+let navLinks = document.querySelector(".nav-links");
+menuB.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
