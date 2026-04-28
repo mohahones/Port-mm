@@ -99,7 +99,7 @@ let typed = new Typed("#typing", {
   strings: [
     "Frontend Developer",
     "Building Modern Interfac",
-    "Loving Clean Code",
+    "Love Clean Code",
   ],
   typeSpeed: 60,
   backSpeed: 40,
@@ -115,8 +115,31 @@ menuB.addEventListener("click", (e) => {
   navLinks.classList.toggle("active");
 });
 document.body.addEventListener("click", () => {
-  if(navLinks.classList.contains("active")){
+  if (navLinks.classList.contains("active")) {
     navLinks.classList.remove("active");
   }
 });
+// تحديد الأقسام التي نريد مراقبتها
+const sections = document.querySelectorAll("section"); 
 
+const options = {
+  threshold: 0.6 // يعني لما يظهر 60% من القسم على الشاشة
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute("id");
+      
+      // 1. تغيير الهاش في الرابط بدون ما الصفحة تقفز
+      history.pushState(null, null, `#${id}`);
+      
+      // 2. فحص إذا كان هذا هو القسم المطلوب لتشغيل الأنيميشن
+      if (id === "frontend") {
+        startTypewriterAnimation(); // نادى دالة الكتابة الخاصة بك
+      }
+    }
+  });
+}, options);
+
+sections.forEach((section) => observer.observe(section));
