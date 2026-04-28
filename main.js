@@ -119,3 +119,4 @@ document.body.addEventListener("click", () => {
     navLinks.classList.remove("active");
   }
 });
+
