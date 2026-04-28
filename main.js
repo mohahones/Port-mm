@@ -110,6 +110,12 @@ let typed = new Typed("#typing", {
 
 let menuB = document.getElementById("mobile-menu");
 let navLinks = document.querySelector(".nav-links");
-menuB.addEventListener("click", () => {
+menuB.addEventListener("click", (e) => {
+  e.stopPropagation();
   navLinks.classList.toggle("active");
+});
+document.body.addEventListener("click", () => {
+  if(navLinks.classList.contains("active")){
+    navLinks.classList.remove("active");
+  }
 });

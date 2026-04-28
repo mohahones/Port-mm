@@ -31,7 +31,7 @@ body {
 
 
 .hero {
-  height: calc(100vh - 63px);
+  height: 100vh;
   padding: 60px 48px 56px;
   border-bottom: 1px solid var(--bd);
   position: relative;
@@ -308,32 +308,6 @@ li {
   color: var(--p)
 }
 
-.stats-row {
-  display: flex;
-  gap: 48px;
-  margin-top: 52px;
-  padding-top: 36px;
-  animation: fadeUp .7s .65s ease both
-}
-
-.stat-num {
-  font-size: 30px;
-  font-weight: 700;
-  font-family: 'Space Mono', monospace;
-  color: var(--tx)
-}
-
-.stat-num span {
-  color: var(--p)
-}
-
-.stat-lbl {
-  font-size: 11px;
-  color: var(--tx3);
-  margin-top: 2px;
-  letter-spacing: 1.5px
-}
-
 .ring-deco {
   position: absolute;
   right: 80px;
@@ -355,6 +329,9 @@ li {
 }
 
 .section {
+  margin: 0 10%;
+  align-content: center;
+  height: 100vh;
   padding: 56px 48px;
   border-bottom: 1px solid var(--bd)
 }
@@ -377,7 +354,7 @@ li {
 
 .skills-wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1px;
   background: var(--bg3);
   border: 1px solid var(--bg3);
@@ -386,11 +363,16 @@ li {
 }
 
 .sk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background: var(--bg2);
-  padding: 20px 18px;
+  padding: 20px;
   transition: background .2s;
   position: relative;
-  overflow: hidden
+  overflow: hidden;
+
 }
 
 .sk:hover {
@@ -402,16 +384,17 @@ li {
 }
 
 .sk-icon {
-  width: 34px;
-  height: 34px;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
   border-radius: 7px;
   background: var(--bg3);
   border: 1px solid var(--bd);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  border-radius: 100%
 }
 
 .sk-name {
@@ -421,11 +404,6 @@ li {
   margin-bottom: 8px
 }
 
-.sk-bar {
-  height: 2px;
-  background: var(--bg3);
-  border-radius: 2px
-}
 
 .sk-fill {
   height: 100%;
@@ -662,14 +640,8 @@ li {
   letter-spacing: 1px
 }
 
-/* GLITCH EFFECT */
-
 .glitch {
   position: relative;
-  display: inline-block;
-  /* لضمان احتواء العناصر الوهمية بدقة */
-  color: white;
-  /* لون النص الأساسي ليبقى ظاهراً */
 }
 
 .glitch::before,
@@ -678,30 +650,24 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  /* تأكد أن الخلفية لا تغطي النص */
-  pointer-events: none;
-  /* لكي لا يعيق النص الوهمي الضغط على الروابط */
 }
 
 .glitch::before {
   animation: glitch1 3s infinite;
-  /* تقسيم النص للنصف العلوي */
   clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
   color: var(--p);
   z-index: -1;
-  /* وضعه خلف النص قليلاً أو فوقه حسب الرغبة */
 }
 
 .glitch::after {
   animation: glitch2 3s infinite;
-  /* تقسيم النص للنصف السفلي */
   clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
   color: var(--t);
   z-index: -2;
 }
+
+
+/* Animation */
 
 @keyframes glitch1 {
 
@@ -714,7 +680,6 @@ li {
 
   90% {
     opacity: 1;
-    /* إظهار الطبقة فجأة */
     transform: translateX(-5px) skewX(-10deg);
   }
 
@@ -743,8 +708,6 @@ li {
     transform: translateX(-5px) skewX(-5deg);
   }
 }
-
-/* Animation */
 
 @keyframes fadeUp {
   from {
