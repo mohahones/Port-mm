@@ -8,6 +8,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
 }
 
 :root {
@@ -26,10 +28,13 @@ html {
 body {
   background: var(--bg);
   color: var(--tx);
-  font-family: 'Space Grotesk', sans-serif;
-  overflow-x: hidden
+  overflow-x: hidden;
+
 }
 
+.scroll {
+  scroll-snap-align: start;
+}
 
 .hero {
   height: 100vh;
