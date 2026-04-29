@@ -107,37 +107,43 @@ let typed = new Typed("#typing", {
   startDelay: 500,
   loop: true,
 });
+const cards = document.querySelectorAll(".co");
 
-const card = document.querySelector(".co");
-const desc = document.querySelector(".project-card-desc");
+cards.forEach((card) => {
+  const desc = card.querySelector(".project-card-desc");
+  let typingInterval;
+  let typingTimeout;
 
-let typingInterval;
-let typingTimeout;
+  card.addEventListener("mouseenter", () => {
+    const text = desc.dataset.text;
+    let i = 0;
 
-card.addEventListener("mouseenter", () => {
-  const text = desc.dataset.text;
-  let i = 0;
+    typingTimeout = setTimeout(() => {
+      typingInterval = setInterval(() => {
+        desc.textContent += text[i];
+        i++;
+        if (i >= text.length) {
+          clearInterval(typingInterval);
+        }
+      }, 25);
+    }, 500);
+  });
 
-
-  desc.textContent = "";
-  card.classList.add("active");
-
-  typingTimeout = setTimeout(() => {
-    typingInterval = setInterval(() => {
-      desc.textContent += text[i];
-      i++;
-
-      if (i >= text.length) {
-        clearInterval(typingInterval);
-      }
-    }, 25);
-  }, 500);
+  card.addEventListener("mouseleave", () => {
+    clearInterval(typingInterval);
+    clearTimeout(typingTimeout);
+    desc.textContent = "";
+  });
 });
-
 card.addEventListener("mouseleave", () => {
   clearInterval(typingInterval);
   clearTimeout(typingTimeout);
 
   desc.textContent = "";
   card.classList.remove("active");
+});
+
+let goLink = document.querySelector(".project1");
+goLink.addEventListener("click", () => {
+  window.location.href = "https://mohahones.github.io/html-css-4/";
 });

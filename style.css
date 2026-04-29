@@ -452,8 +452,8 @@ li {
   height: auto;
   width: auto;
   background-color: var(--bg);
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 0.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
 .card {
@@ -465,7 +465,8 @@ li {
   flex-direction: column;
   justify-content: end;
   animation: fadeUp .6s ease both;
-
+  background-size: cover;
+  cursor: pointer;
 }
 
 .img-sk {
@@ -475,15 +476,10 @@ li {
 
 .project1 {
   background-image: url(img/111.png);
-  border-image: none;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .project2 {
-  background-image: url(img/111.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url(img/222.png);
 }
 
 .co {
@@ -500,8 +496,10 @@ li {
   padding: 0.5rem 0;
   transition: transform 0.4s ease;
 }
-.project1:hover .project-card-h {
-transform: translateY(-45px);}
+
+.card:hover .project-card-h {
+  transform: translateY(-45px);
+}
 
 .project-card-desc {
   line-height: 1;
@@ -516,7 +514,7 @@ transform: translateY(-45px);}
   font-family: var(--fontFamily--P);
 }
 
-.project1:hover .project-card-desc {
+.card:hover .project-card-desc {
   opacity: 1;
 }
 
@@ -549,13 +547,13 @@ transform: translateY(-45px);}
   pointer-events: none;
 }
 
-.project1:hover .skils {
+.card:hover .skils {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-.project:hover .img-sk {
+.card:hover .img-sk {
   transition: all 0.5s ease;
   transform: rotate(-10deg);
 }
