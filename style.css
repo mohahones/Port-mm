@@ -31,6 +31,10 @@ body {
   overflow-x: hidden;
 
 }
+body.active{
+  background-color: var(--tx);
+  color: var(--bg);
+}
 
 .scroll {
   scroll-snap-align: start;
@@ -461,7 +465,6 @@ li {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
-  color: black;
   flex-direction: column;
   justify-content: end;
   animation: fadeUp .6s ease both;
@@ -491,7 +494,6 @@ li {
 
 .project-card-h {
   font-family: var(--fontFamily--P);
-  color: var(--tx);
   font-size: 2rem;
   padding: 0.5rem 0;
   transition: transform 0.4s ease;

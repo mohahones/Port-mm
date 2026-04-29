@@ -86,6 +86,18 @@
 //   });
 // })();
 
+let menuB = document.getElementById("mobile-menu");
+let navLinks = document.querySelector(".nav-links");
+menuB.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navLinks.classList.toggle("active");
+});
+document.body.addEventListener("click", () => {
+  if (navLinks.classList.contains("active")) {
+    navLinks.classList.remove("active");
+  }
+});
+
 let btnC = document.querySelector(".btn-s");
 btnC.addEventListener("click", download);
 function download() {
@@ -138,15 +150,20 @@ cards.forEach((card) => {
 
 let goLink = document.querySelector(".project1");
 goLink.addEventListener("click", () => {
-  window.open("https://mohahones.github.io/html-css-4/","_blank")
+  window.open("https://mohahones.github.io/html-css-4/", "_blank");
 });
 
 let goLink1 = document.querySelector(".project2");
 goLink1.addEventListener("click", () => {
-  window.open("https://mohahones.github.io/Social-proof-section/","_blank")
+  window.open("https://mohahones.github.io/Social-proof-section/", "_blank");
 });
 
 let goLink2 = document.querySelector(".more-project");
 goLink2.addEventListener("click", () => {
-  window.open("html/project.html","_blank")
+  window.open("html/project.html", "_blank");
+});
+
+let darkLight = document.querySelector(".dark-night");
+darkLight.addEventListener("click", () => {
+  darkLight.classList.toggle("active");
 });
