@@ -972,7 +972,21 @@ li {
     padding: 0.2rem;
     font-size: 0.9rem
   }
-
+  .project{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card{
+    display: none;
+  }
+  .card:nth-child(-n+2){
+    display: block;
+  }
+  .more-project{
+    display: block;
+    order: 4;
+  }
 }
 
 @media (min-width: 768px) {
