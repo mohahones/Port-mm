@@ -135,15 +135,18 @@ cards.forEach((card) => {
     desc.textContent = "";
   });
 });
-card.addEventListener("mouseleave", () => {
-  clearInterval(typingInterval);
-  clearTimeout(typingTimeout);
-
-  desc.textContent = "";
-  card.classList.remove("active");
-});
 
 let goLink = document.querySelector(".project1");
 goLink.addEventListener("click", () => {
-  window.location.href = "https://mohahones.github.io/html-css-4/";
+  window.open("https://mohahones.github.io/html-css-4/","_blank")
+});
+
+let goLink1 = document.querySelector(".project2");
+goLink1.addEventListener("click", () => {
+  window.open("https://mohahones.github.io/Social-proof-section/","_blank")
+});
+
+let goLink2 = document.querySelector(".more-project");
+goLink2.addEventListener("click", () => {
+  window.open("html/project.html","_blank")
 });
