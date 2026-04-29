@@ -982,7 +982,7 @@ li {
   .card{
     display: none;
   }
-  .card:nth-child(-n+2){
+  .card:nth-child(-n+1){
     display: block;
   }
   .more-project{

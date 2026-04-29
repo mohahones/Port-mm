@@ -138,7 +138,7 @@ cards.forEach((card) => {
           clearInterval(typingInterval);
         }
       }, 25);
-    }, 500);
+    }, 200);
   });
 
   card.addEventListener("mouseleave", () => {
