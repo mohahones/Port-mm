@@ -987,6 +987,13 @@ li {
     display: block;
     order: 4;
   }
+  .click{
+    padding: 20px;
+    
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
 }
 
 @media (min-width: 768px) {
