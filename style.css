@@ -175,7 +175,8 @@ li {
   font-weight: 800;
   letter-spacing: 1.5px;
   transition: color .2s;
-  font-family: 'Space Mono', monospace
+  font-family: var(--fontFamily--P);
+
 }
 
 .nav-links a:hover {
@@ -356,13 +357,21 @@ li {
   margin-bottom: 10px
 }
 
+.ev {
+  display: block;
+  padding-left: 50%;
+}
+
 .sec-h {
+  display: inline-block;
   font-size: 34px;
   font-weight: 700;
   font-family: var(--fontFamily--P);
   letter-spacing: -1px;
   margin-bottom: 36px;
-  line-height: 1.1
+  line-height: 1.1;
+  transform: skewX(-30deg);
+  transform: rotate(-15deg);
 }
 
 .skills-wrap {
@@ -438,111 +447,117 @@ li {
   transition: width 1.4s cubic-bezier(.4, 0, .2, 1)
 }
 
-.proj-grid {
+.project {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px
+  height: auto;
+  width: auto;
+  background-color: var(--bg);
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 0.4rem;
 }
 
-.pc {
-  background: var(--bg2);
+.card {
   border: 1px solid var(--bd);
-  border-radius: 8px;
+  border-radius: 9px;
   overflow: hidden;
-  transition: border-color .25s, transform .25s;
-  cursor: pointer;
-  animation: borderGlow 4s infinite
-}
-
-.pc:hover {
-  border-color: #AFA9EC55;
-  transform: translateY(-3px)
-}
-
-.pc-thumb {
-  height: 140px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden
+  color: black;
+  flex-direction: column;
+  justify-content: end;
+  animation: fadeUp .6s ease both;
+
 }
 
-.pt1 {
-  background: #0c0a18
+.img-sk {
+  width: 30px;
+  transform: rotate(370deg);
 }
 
-.pt2 {
-  background: #080f0d
+.project1 {
+  background-image: url(img/111.png);
+  border-image: none;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.pt3 {
-  background: #0f0808
+.project2 {
+  background-image: url(img/111.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.pc-glyph {
-  font-size: 48px;
-  opacity: .5;
-  animation: floatY 4s ease-in-out infinite
+.co {
+  overflow: hidden;
+  padding: 12rem 2rem 0.5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--bg3) 100%);
+  animation: fadeUp .6s ease both;
 }
 
-.pc:nth-child(2) .pc-glyph {
-  animation-delay: .8s
+.project-card-h {
+  font-family: var(--fontFamily--P);
+  color: var(--tx);
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  transition: transform 0.4s ease;
 }
+.project1:hover .project-card-h {
+transform: translateY(-45px);}
 
-.pc:nth-child(3) .pc-glyph {
-  animation-delay: 1.6s
-}
-
-.pc-tag {
+.project-card-desc {
+  line-height: 1;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #111;
-  border: 1px solid var(--bd);
-  padding: 2px 9px;
-  border-radius: 16px;
-  font-size: 10px;
+  bottom: 5px;
+  left: 20px;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 0.9rem;
   color: var(--tx2);
-  font-family: 'Space Mono', monospace
+  padding-bottom: 1rem;
+  font-family: var(--fontFamily--P);
 }
 
-.pc-body {
-  padding: 18px
+.project1:hover .project-card-desc {
+  opacity: 1;
 }
 
-.pc-title {
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 5px
-}
+.skils-i {
 
-.pc-desc {
-  font-size: 12px;
-  color: var(--tx2);
-  line-height: 1.6;
-  margin-bottom: 14px
-}
-
-.pc-pills {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap
-}
-
-.pill {
-  font-size: 10px;
-  font-family: 'Space Mono', monospace;
-  color: var(--p);
-  background: #14102a;
-  border: 1px solid #2a1f4a;
-  padding: 2px 7px;
-  border-radius: 3px
+  background-color: var(--bg);
+  padding: 0.2rem;
+  border-radius: 5px;
+  font-family: var(--fontFamily--P);
+  color: var(--tx);
 }
 
 .exp-list {
   display: flex;
   flex-direction: column
+}
+
+.skils {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-size: 0.6rem;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, var(--bg3) 290%);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.project1:hover .skils {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.project:hover .img-sk {
+  transition: all 0.5s ease;
+  transform: rotate(-10deg);
 }
 
 .ei {
@@ -693,6 +708,15 @@ li {
 
 
 /* Animation */
+@keyframes typing {
+  form {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
 
 @keyframes glitch1 {
 
@@ -962,7 +986,7 @@ li {
 
   .typed {
     font-size: 1.5rem;
-      padding: 1rem;
+    padding: 1rem;
 
   }
 

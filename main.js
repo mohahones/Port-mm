@@ -108,38 +108,36 @@ let typed = new Typed("#typing", {
   loop: true,
 });
 
-let menuB = document.getElementById("mobile-menu");
-let navLinks = document.querySelector(".nav-links");
-menuB.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navLinks.classList.toggle("active");
-});
-document.body.addEventListener("click", () => {
-  if (navLinks.classList.contains("active")) {
-    navLinks.classList.remove("active");
-  }
-});
-// تحديد الأقسام التي نريد مراقبتها
-const sections = document.querySelectorAll("section"); 
+const card = document.querySelector(".co");
+const desc = document.querySelector(".project-card-desc");
 
-const options = {
-  threshold: 0.6 // يعني لما يظهر 60% من القسم على الشاشة
-};
+let typingInterval;
+let typingTimeout;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute("id");
-      
-      // 1. تغيير الهاش في الرابط بدون ما الصفحة تقفز
-      history.pushState(null, null, `#${id}`);
-      
-      // 2. فحص إذا كان هذا هو القسم المطلوب لتشغيل الأنيميشن
-      if (id === "frontend") {
-        startTypewriterAnimation(); // نادى دالة الكتابة الخاصة بك
+card.addEventListener("mouseenter", () => {
+  const text = desc.dataset.text;
+  let i = 0;
+
+
+  desc.textContent = "";
+  card.classList.add("active");
+
+  typingTimeout = setTimeout(() => {
+    typingInterval = setInterval(() => {
+      desc.textContent += text[i];
+      i++;
+
+      if (i >= text.length) {
+        clearInterval(typingInterval);
       }
-    }
-  });
-}, options);
+    }, 25);
+  }, 500);
+});
 
-sections.forEach((section) => observer.observe(section));
+card.addEventListener("mouseleave", () => {
+  clearInterval(typingInterval);
+  clearTimeout(typingTimeout);
+
+  desc.textContent = "";
+  card.classList.remove("active");
+});
