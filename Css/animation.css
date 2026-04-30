@@ -1,0 +1,193 @@
+@keyframes typing {
+    form {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes glitch1 {
+
+    0%,
+    89%,
+    100% {
+        transform: translateX(-3px) skewX(0deg);
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateX(-5px) skewX(-10deg);
+    }
+
+    95% {
+        opacity: 1;
+        transform: translateX(5px) skewX(5deg);
+    }
+}
+
+@keyframes glitch2 {
+
+    0%,
+    89%,
+    100% {
+        transform: translateX(3px) skewX(0deg);
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 1;
+        transform: translateX(5px) skewX(10deg);
+    }
+
+    96% {
+        opacity: 1;
+        transform: translateX(-5px) skewX(-5deg);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 0.9
+    }
+}
+
+@keyframes slideRight {
+    from {
+        width: 0
+    }
+
+    to {
+        width: var(--w)
+    }
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-8px)
+    }
+}
+
+@keyframes scanline {
+    0% {
+        top: -100%
+    }
+
+    100% {
+        top: 200%
+    }
+}
+
+@keyframes borderGlow {
+
+    0%,
+    100% {
+        border-color: #1e1e1e
+    }
+
+    50% {
+        border-color: #AFA9EC44
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translate(0, 0);
+        opacity: .6
+    }
+
+    100% {
+        transform: translate(var(--dx), var(--dy));
+        opacity: 0
+    }
+}
+
+@keyframes rotateRing {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes pulseScale {
+
+    0%,
+    100% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.04)
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%
+    }
+
+    100% {
+        left: 200%
+    }
+}

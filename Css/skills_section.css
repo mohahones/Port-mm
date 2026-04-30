@@ -1,0 +1,133 @@
+.skills {
+    align-content: center;
+    height: 100vh;
+    padding: 56px 48px;
+    border-bottom: 1px solid var(--bd);
+    font-family: var(--fontFamily--P);
+}
+
+.sec-hh {
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 36px;
+    line-height: 1.1;
+    transform: skewX(-30deg);
+    transform: rotate(-15deg);
+}
+
+.skills-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.6rem;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeUp .6s ease both;
+}
+
+.sk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--bg2);
+    padding: 20px;
+    transition: background .2s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.sk:hover {
+    background: var(--bg3)
+}
+
+.sk:hover .sk-fill {
+    animation: pulseScale .4s ease
+}
+
+.sk-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 7px;
+    background: var(--bg3);
+    border: 1px solid var(--bd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    transition: transform 0.3s;
+    transform: rotate(-8deg) scale(1.1);
+    background-image: linear-gradient();
+}
+
+.hover:hover .sk-icon {
+    transform: rotate(1deg) scale(1);
+    opacity: 1;
+}
+
+.sk-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ccc;
+    margin-bottom: 8px
+}
+
+@media (min-width: 768px) {
+
+    .sec-hh {
+        font-size: 3.5rem;
+    }
+
+    .sk-name {
+        font-size: 1.5rem;
+    }
+
+    .sk-icon {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    .img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .skills-wrap {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    }
+
+}
+
+@media (min-width: 1280px) {
+
+    .sk-name {
+        font-size: 2rem;
+    }
+
+    .sec-hh {
+        font-size: 6.5rem;
+    }
+
+    .sk-icon {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+
+    .img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .skills-wrap {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+    }
+
+}

@@ -1,90 +1,26 @@
-// (function () {
-//   const pc = document.getElementById("particles");
-//   for (let i = 0; i < 22; i++) {
-//     const p = document.createElement("div");
-//     p.className = "particle";
-//     const dx = (Math.random() - 0.5) * 200 + "px";
-//     const dy = -(Math.random() * 200 + 80) + "px";
-//     p.style.cssText = `left:${Math.random() * 100}%;top:${Math.random() * 100}%;--dx:${dx};--dy:${dy};animation-delay:${Math.random() * 4}s;animation-duration:${3 + Math.random() * 3}s;opacity:${0.3 + Math.random() * 0.5}`;
-//     pc.appendChild(p);
-//   }
+function particles() {
+  const pc = document.getElementById("particles");
+  for (let i = 0; i < 22; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
+    const dx = (Math.random() - 0.5) * 200 + "px";
+    const dy = -(Math.random() * 200 + 80) + "px";
+    p.style.cssText = `left:${Math.random() * 100}%;top:${Math.random() * 100}%;--dx:${dx};--dy:${dy};animation-delay:${Math.random() * 4}s;animation-duration:${3 + Math.random() * 3}s;opacity:${0.3 + Math.random() * 0.5}`;
+    pc.appendChild(p);
+  }
 
-//   function animCount(el, target, duration) {
-//     let start = null;
-//     function step(ts) {
-//       if (!start) start = ts;
-//       const prog = Math.min((ts - start) / duration, 1);
-//       el.textContent = Math.round(prog * target);
-//       if (prog < 1) requestAnimationFrame(step);
-//     }
-//     requestAnimationFrame(step);
-//   }
-
-//   const statsObs = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((e) => {
-//         if (e.isIntersecting) {
-//           setTimeout(
-//             () => animCount(document.getElementById("s1"), 5, 1200),
-//             0,
-//           );
-//           setTimeout(
-//             () => animCount(document.getElementById("s2"), 40, 1400),
-//             200,
-//           );
-//           setTimeout(
-//             () => animCount(document.getElementById("s3"), 12, 1000),
-//             400,
-//           );
-//           setTimeout(
-//             () => animCount(document.getElementById("s4"), 99, 1600),
-//             600,
-//           );
-//           statsObs.disconnect();
-//         }
-//       });
-//     },
-//     { threshold: 0.4 },
-//   );
-//   statsObs.observe(document.querySelector(".stats-row"));
-
-//   const skillsObs = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((e) => {
-//         if (e.isIntersecting) {
-//           document.querySelectorAll(".sk-fill").forEach((f, i) => {
-//             setTimeout(() => {
-//               f.style.width = f.dataset.w + "%";
-//             }, i * 80);
-//           });
-//           skillsObs.disconnect();
-//         }
-//       });
-//     },
-//     { threshold: 0.2 },
-//   );
-//   skillsObs.observe(document.getElementById("skills-sec"));
-
-//   const fadeObs = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((e) => {
-//         if (e.isIntersecting) {
-//           e.target.style.animation = "fadeUp .6s ease both";
-//         }
-//       });
-//     },
-//     { threshold: 0.1 },
-//   );
-//   document.querySelectorAll(".ei,.pc,.cta-box").forEach((el) => {
-//     el.style.opacity = "0";
-//     el.style.transform = "translateY(24px)";
-//     el.addEventListener("animationstart", () => {
-//       el.style.opacity = "";
-//       el.style.transform = "";
-//     });
-//     fadeObs.observe(el);
-//   });
-// })();
+  function animCount(el, target, duration) {
+    let start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      const prog = Math.min((ts - start) / duration, 1);
+      el.textContent = Math.round(prog * target);
+      if (prog < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+}
+particles();
 
 let menuB = document.getElementById("mobile-menu");
 let navLinks = document.querySelector(".nav-links");
@@ -109,8 +45,8 @@ function download() {
 
 let typed = new Typed("#typing", {
   strings: [
-    "Frontend Developer",
-    "Building Modern Interfac",
+    "am Frontend Developer",
+    "am Building Modern Interfac",
     "Love Clean Code",
   ],
   typeSpeed: 60,
@@ -163,7 +99,7 @@ goLink2.addEventListener("click", () => {
   window.open("html/project.html", "_blank");
 });
 
-let darkLight = document.querySelector(".dark-night");
-darkLight.addEventListener("click", () => {
-  darkLight.classList.toggle("active");
-});
+// let darkLight = document.querySelector(".dark-night");
+// darkLight.addEventListener("click", () => {
+//   darkLight.classList.toggle("active");
+// });
