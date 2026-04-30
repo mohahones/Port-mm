@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    gap: 2rem;
     font-family: var(--fontFamily--P);
     min-height: 480px;
 }
@@ -43,7 +43,6 @@
     letter-spacing: -2px;
     margin-bottom: 10px;
     animation: fadeUp .7s .2s ease both;
-    overflow: hidden;
 }
 
 .hero-name .line2 {
@@ -101,7 +100,6 @@
     letter-spacing: .5px;
     transition: transform .15s, box-shadow .15s;
     position: relative;
-    overflow: hidden;
     text-decoration: none;
     text-align: center;
 }
@@ -162,7 +160,6 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    overflow: hidden;
 }
 
 .particle {
@@ -178,7 +175,6 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    overflow: hidden;
     opacity: .03
 }
 
@@ -224,6 +220,25 @@
     clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
     color: var(--t);
     z-index: -2;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    animation: fadeUp .6s .7s ease both
+}
+
+.ip {
+    display: inline-block;
+    position: relative;
+    font-size: 3rem;
+    color: var(--p);
+    transition: transform 0.7s ease, color 0.6s ease;
+}
+
+.ip:hover {
+    transform: translateY(-7px);
+    color: var(--t);
 }
 
 
