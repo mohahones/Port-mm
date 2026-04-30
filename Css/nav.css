@@ -29,7 +29,8 @@
 
 .nav-links {
     display: flex;
-    gap: 28px
+    gap: 28px;
+    padding: 2rem;
 }
 
 .nav-links a {

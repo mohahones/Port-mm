@@ -98,8 +98,3 @@ let goLink2 = document.querySelector(".more-project");
 goLink2.addEventListener("click", () => {
   window.open("html/project.html", "_blank");
 });
-
-// let darkLight = document.querySelector(".dark-night");
-// darkLight.addEventListener("click", () => {
-//   darkLight.classList.toggle("active");
-// });

@@ -1,0 +1,45 @@
+.contact {
+   align-content: center;
+   height: 100vh;
+   padding: 56px 48px;
+   border-bottom: 1px solid var(--bd);
+   font-family: var(--fontFamily--P);
+}
+
+.form-h {
+   display: inline-block;
+   font-size: 34px;
+   font-weight: 700;
+   font-family: var(--fontFamily--P);
+   letter-spacing: -1px;
+   margin-bottom: 36px;
+   line-height: 1.1;
+   transform: skewX(-30deg);
+   transform: rotate(-15deg);
+}
+
+.form {
+   background-color: var(--bg2);
+   font-family: var(--fontFamily--P);
+   padding: 2rem;
+}
+
+.form-in {
+   display: grid;
+   gap: 2rem;
+}
+
+.container {
+   display: none;
+   text-align: center;
+}
+
+.container.activee {
+   display: block;
+}
+
+.input {
+   width: 14rem;
+   height: 2rem;
+   border-radius: 5px;
+}
