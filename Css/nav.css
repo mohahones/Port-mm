@@ -52,9 +52,11 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
+    transform: none !important
 }
 
 .menu-toggle span {
+
     width: 20px;
     height: 2px;
     border-radius: 100rem;
