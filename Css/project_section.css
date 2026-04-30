@@ -155,8 +155,7 @@
     }
 
     .click {
-        padding: 20px;
-
+        padding: 30px;
         font-size: 1.5rem;
         text-align: center;
     }
@@ -183,9 +182,12 @@
 
     .more-click {
         text-align: center;
-        padding-top: 33%;
     }
 
+    .click {
+        padding: 30%;
+        text-align: center;
+    }
 
 
 }
