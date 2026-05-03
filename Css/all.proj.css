@@ -1,18 +1,29 @@
-.sec-h {
-    display: inline-block;
-    font-size: 34px;
-    font-weight: 700;
-    font-family: var(--fontFamily--P);
-    letter-spacing: -1px;
-    margin-bottom: 36px;
-    line-height: 1.1;
-    transform: skewX(-30deg);
-    transform: rotate(-15deg);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--tx);
+}
+
+:root {
+    --p: #AFA9EC;
+    --t: #5DCAA5;
+    --bg: #080808;
+    --bg2: #0e0e0e;
+    --bg3: #141414;
+    --bd: #1e1e1e;
+    --tx: #f0f0f0;
+    --tx2: #888;
+    --tx3: #444;
+    --fontFamily--P: "Cause", cursive;
 }
 
 .projectt {
     align-content: center;
-    height: 100vh;
     padding: 56px 48px;
     font-family: var(--fontFamily--P);
 }
@@ -36,6 +47,7 @@
 }
 
 .card {
+    position: relative;
     max-height: 327px;
     border: 1px solid var(--bd);
     border-radius: 9px;
@@ -71,10 +83,13 @@
 
 .project-card-h {
     font-family: var(--fontFamily--P);
-    font-size: 2rem;
+    font-size: 1.4rem;
     padding: 0.5rem 0;
     transition: transform 0.4s ease;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .card:hover .project-card-h {
@@ -98,9 +113,6 @@
     opacity: 1;
 }
 
-.more-project:hover .click {
-    transform: rotate(-10deg);
-}
 
 .skils {
     display: flex;
@@ -125,88 +137,5 @@
 
 .card:hover {
     transition: all 0.5s ease;
-    transform: rotate(-10deg);
-}
-
-.more-project {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: none;
-
-}
-
-.click {
-    margin-right: 15%;
-    color: var(--tx);
-    font-family: var(--fontFamily--P);
-    font-size: 2.5rem;
-    transition: all 0.4s ease;
-}
-
-/* Media */
-
-@media (min-width: 368px) and (max-width: 767px) {
-
-    .project {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card {
-        display: none;
-    }
-
-    .card:first-child {
-        display: block;
-    }
-
-    .more-project {
-        display: block;
-    }
-
-    .click {
-        padding: 30px;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-}
-
-@media (min-width: 768px) {
-    .sec-h {
-        font-size: 3.5rem;
-    }
-
-    .card {
-        display: none;
-    }
-
-    .card:nth-child(-n+3) {
-        display: block;
-    }
-
-    .more-project {
-        display: block;
-        order: 4;
-    }
-
-    .more-click {
-        text-align: center;
-    }
-
-    .click {
-        padding: 30%;
-        text-align: center;
-    }
-
-
-}
-
-@media (min-width: 1280px) {
-    .sec-h {
-        font-size: 6.5rem;
-    }
-
+    transform: rotate(0deg);
 }
