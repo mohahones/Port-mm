@@ -158,12 +158,13 @@
         display: none;
     }
 
-    .card:first-child {
+    .card:nth-child(-n+2) {
         display: block;
     }
 
     .more-project {
         display: block;
+        order: 4;
     }
 
     .click {
